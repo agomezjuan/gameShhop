@@ -105,3 +105,6 @@ dist
 
 #Prettier
 .prettierrc
+
+#Visual Studio Code Workspace
+*.code-workspace
