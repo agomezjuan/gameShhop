@@ -52,6 +52,10 @@ header nav ul li a {
   margin: 0px 4px;
 }
 
+header nav ul li a:hover {
+  color: #6b3b7a;
+}
+
 header nav .carrito {
   display: none;
   margin-left: 42px;
@@ -125,6 +129,12 @@ header nav .burger {
   color: white;
   background-color: #d01418;
   border-radius: 5px;
+  -webkit-transition: background-color 450ms;
+  transition: background-color 450ms;
+}
+
+.banner__text a:hover {
+  background-color: #6b3b7a;
 }
 
 main {
@@ -177,6 +187,21 @@ main .productos .card {
   margin: 15px;
   min-width: 240px;
   max-width: 265px;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+main .productos .card:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-box-shadow transform 1s ease-in;
+  transition: -webkit-box-shadow transform 1s ease-in;
+  transition: box-shadow transform 1s ease-in;
+  transition: box-shadow transform 1s ease-in, -webkit-box-shadow transform 1s ease-in;
 }
 
 main .productos .card__image {
@@ -244,9 +269,29 @@ main .estrellas .compus {
   padding: 30px;
   border-radius: 5px;
   color: #f3f3f3;
+  cursor: pointer;
   font-family: Roboto;
   font-weight: 400;
   font-size: 15px;
+  -webkit-box-shadow: 0px 0px 2px #222222;
+          box-shadow: 0px 0px 2px #222222;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 300ms ease-out;
+  transition: -webkit-transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+  transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
+}
+
+main .estrellas .sillas:hover,
+main .estrellas .compus:hover {
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  -webkit-box-shadow: 0px 2px 4px #222222;
+          box-shadow: 0px 2px 4px #222222;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 main .estrellas .sillas {
@@ -319,8 +364,8 @@ footer .redes .social .icons {
 }
 
 footer .copy {
-  background-color: #c4c4c4;
-  color: black;
+  background-color: #f3f3f3;
+  color: #222222;
   text-align: center;
   padding: 7px;
 }

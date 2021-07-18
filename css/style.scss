@@ -1,3 +1,10 @@
+// VARIABLES
+$color-principal: #d01418;
+$color-secundario: #6b3b7a;
+$oscuro:#222222;
+$claro: #f3f3f3;
+
+// ESTILOS
 * {
   box-sizing: border-box;
 }
@@ -5,7 +12,7 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  background-color: #f3f3f3;
+  background-color: $claro;
 }
 
 header {
@@ -13,12 +20,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 35px;
-  background-color: #222222;
+  background-color: $oscuro;
   nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color: #f3f3f3;
+    color: $claro;
     ul {
       display: none;
       list-style: none;
@@ -27,8 +34,11 @@ header {
         a {
           font-weight: 700;
           text-decoration: none;
-          color: #f3f3f3;
+          color: $claro;
           margin: 0px 4px;
+          &:hover {
+            color:$color-secundario;
+          }
         }
       }
     }
@@ -37,7 +47,7 @@ header {
       margin-left: 42px;
     }
     .burger {
-      color: #f3f3f3;
+      color: $claro;
     }
   }
 }
@@ -70,7 +80,7 @@ header {
       }
       color: white;
       span {
-        color: #d01418;
+        color: $color-principal;
       }
     }
     a {
@@ -84,8 +94,12 @@ header {
       line-height: 29px;
       text-decoration: none;
       color: white;
-      background-color: #d01418;
+      background-color: $color-principal;
       border-radius: 5px;
+      transition: background-color 450ms;
+      &:hover {
+        background-color: #6b3b7a;
+      }
     }
   }
 }
@@ -95,7 +109,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f3f3f3;
+  background-color: $claro;
   width: 100%;
   h2 {
     text-align: center;
@@ -123,6 +137,12 @@ main {
       margin: 15px;
       min-width: 240px;
       max-width: 265px;
+      transition: transform 0.5s ease-out;
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        transition: box-shadow transform 1s ease-in;
+      }
       &__image {
         border-bottom: 1px solid #e2e2e2;
         img {
@@ -168,11 +188,20 @@ main {
       margin: 12px;
       padding: 30px;
       border-radius: 5px;
-      color: #f3f3f3;
+      color: $claro;
+      cursor: pointer;
       font: {
         family: Roboto;
         weight: 400;
         size: 15px;
+      }
+      box-shadow: 0px 0px 2px $oscuro;
+      will-change: transform;
+      transition: transform 300ms ease-out;
+      &:hover {
+        transition: transform 300ms ease-in;
+        box-shadow: 0px 2px 4px $oscuro;
+        transform: translateY(-5px);
       }
     }
     .sillas {
@@ -208,10 +237,10 @@ footer {
     min-height: 191px;
     max-height: 216px;
     padding: 20px 75px;
-    background-color: #222222;
+    background-color: $oscuro;
     .social {
       h2 {
-        color: #f3f3f3;
+        color: $claro;
         text-align: center;
         font: {
           family: Roboto;
@@ -228,13 +257,15 @@ footer {
     }
   }
   .copy {
-    background-color: #c4c4c4;
-    color: black;
+    background-color: $claro;
+    color: $oscuro;
     text-align: center;
     padding: 7px;
   }
 }
 
+
+// MEDIA QUERIES
 @media (min-width: 657px) {
   header nav ul {
     display: flex;
