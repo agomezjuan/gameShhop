@@ -6,6 +6,7 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  background-color: #f3f3f3;
 }
 
 header {
@@ -117,5 +118,93 @@ header nav .carrito {
   color: white;
   background-color: #d01418;
   border-radius: 5px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f3f3f3;
+  width: 100%;
+}
+
+main h2 {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+main .productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 855px;
+}
+
+main .productos .card {
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 240px;
+  max-width: 265px;
+}
+
+main .productos .card__image {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+main .productos .card__image img {
+  display: block;
+  margin: 30px auto;
+}
+
+main .productos .card__text {
+  padding: 21px 20px;
+}
+
+main .productos .card__text .precio {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+main .productos .card__text .cuotas {
+  font-size: 13px;
+  margin: 4px 0px 3px 0px;
+  padding: 0;
+}
+
+main .productos .card__text .envio {
+  font-size: 10px;
+  color: yellowgreen;
+  padding: 0;
+  margin: 0;
+}
+
+footer .copy {
+  background-color: #c4c4c4;
+  color: black;
+  text-align: center;
+  padding: 7px;
 }
 /*# sourceMappingURL=style.css.map */

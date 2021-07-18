@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  background-color: #f3f3f3;
 }
 
 header {
@@ -67,18 +68,88 @@ header {
       }
     }
     a {
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-        padding: 16px;
-        width: 220px;
-        height: 61px;
-        font-size: 25px;
-        line-height: 29px;
-        text-decoration: none;
-        color: white;
-        background-color: #d01418;
-        border-radius: 5px;
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      padding: 16px;
+      width: 220px;
+      height: 61px;
+      font-size: 25px;
+      line-height: 29px;
+      text-decoration: none;
+      color: white;
+      background-color: #d01418;
+      border-radius: 5px;
     }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  width: 100%;
+  h2 {
+    text-align: center;
+    font: {
+      family: Roboto, sans-serif;
+      weight: 400;
+      size: 30px;
+    }
+    margin: {
+      top: 40px;
+      bottom: 20px;
+    }
+  }
+  .productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 855px;
+    .card {
+      background-color: white;
+      border-radius: 5px;
+      width: 100%;
+      min-width: 240px;
+      max-width: 265px;
+      &__image {
+        border-bottom: 1px solid #e2e2e2;
+        img {
+          display: block;
+          margin: 30px auto;
+        }
+      }
+      &__text {
+        padding: 21px 20px;
+        .precio {
+          font-size: 20px;
+          padding: 0;
+          margin: 0;
+        }
+        .cuotas {
+          font-size: 13px;
+          margin: 4px 0px 3px 0px;
+          padding: 0;
+        }
+        .envio {
+          font-size: 10px;
+          color: yellowgreen;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .copy {
+    background-color: #c4c4c4;
+    color: black;
+    text-align: center;
+    padding: 7px;
   }
 }
