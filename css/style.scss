@@ -19,19 +19,26 @@ header {
     justify-content: flex-end;
     align-items: center;
     ul {
+      display: none;
       list-style: none;
       li {
         display: inline-block;
         a {
           font-weight: 700;
           text-decoration: none;
-          color: white;
+          color: #f3f3f3;
           margin: 0px 4px;
         }
       }
     }
     .carrito {
+      display: none;
       margin-left: 42px;
+    }
+    .burger {
+      span {
+        color: #f3f3f3 !important;
+      }
     }
   }
 }
@@ -105,14 +112,16 @@ main {
   }
   .productos {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
-    max-width: 855px;
+    max-width: 900px;
     .card {
       background-color: white;
       border-radius: 5px;
       width: 100%;
+      margin: 15px;
       min-width: 240px;
       max-width: 265px;
       &__image {
@@ -136,20 +145,129 @@ main {
         }
         .envio {
           font-size: 10px;
-          color: yellowgreen;
+          color: #619d00;
           padding: 0;
           margin: 0;
         }
       }
     }
   }
+  .estrellas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 72px;
+    .sillas,
+    .compus {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 288px;
+      height: 108px;
+      margin: 12px;
+      padding: 30px;
+      border-radius: 5px;
+      color: #f3f3f3;
+      font: {
+        family: Roboto;
+        weight: 400;
+        size: 15px;
+      }
+    }
+    .sillas {
+      background: {
+        image: url(../img/banner1.png);
+        repeat: no-repeat;
+        position: center center;
+        size: cover;
+      }
+    }
+    .compus {
+      background: {
+        image: url(../img/banner2.png);
+        repeat: no-repeat;
+        position: center center;
+        size: cover;
+      }
+    }
+  }
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 191px;
+    max-height: 216px;
+    padding: 20px 75px;
+    background-color: #222222;
+    .social {
+      h2 {
+        color: #f3f3f3;
+        text-align: center;
+        font: {
+          family: Roboto;
+          weight: 400;
+          size: 25px;
+        }
+        margin: 31px 0px 20px 0px;
+      }
+      .icons {
+        display: flex;
+        justify-content: space-between;
+        width: 170px;
+      }
+    }
+  }
   .copy {
     background-color: #c4c4c4;
     color: black;
     text-align: center;
     padding: 7px;
+  }
+}
+
+@media (min-width: 657px) {
+  header nav ul {
+    display: flex;
+  }
+  header nav .carrito {
+    display: inline-block;
+  }
+  header .burger {
+    display: none;
+  }
+  main {
+    .estrellas {
+      .sillas,
+      .compus {
+        width: 460px;
+        height: 135px;
+        margin: 10px 57px;
+      }
+    }
+  }
+  footer {
+    .redes {
+      flex-direction: row;
+      justify-content: space-between;
+      .social {
+        h2 {
+          margin: 0;
+        }
+        .icons {
+          padding-top: 20px;
+        }
+      }
+    }
   }
 }
