@@ -18,6 +18,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    color: #f3f3f3;
     ul {
       display: none;
       list-style: none;
@@ -36,9 +37,7 @@ header {
       margin-left: 42px;
     }
     .burger {
-      span {
-        color: #f3f3f3 !important;
-      }
+      color: #f3f3f3;
     }
   }
 }
